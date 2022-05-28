@@ -1,12 +1,14 @@
 module.exports = {
   content: ['./src/**/*.{html,js}'],
   mode: 'jit',
-  safelist: ['c-hamburger', 'c-hamburger__line', 'c-hamburger__line:after'],
+  safelist: [],
   theme: {
     extend: {}
   },
   plugins: [
     require('./src/plugins/tailwind.scroller'),
-    require('./src/plugins/tailwind.hamburger')
+    require('./src/plugins/tailwind.hamburger'),
+    require('./src/plugins/tailwind.navigation'),
+    require('./src/plugins/tailwind.mobileNav')
   ]
 }
