@@ -1,6 +1,6 @@
 {
   "name": "frost_scroller",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A collection of components built with AlpineJS and Tailwind for use with the Frost Starter Kit made available to Statamic.",
   "private": true,
   "scripts": {

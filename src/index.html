@@ -11,17 +11,20 @@
 </head>
 <body>
 
+
+
   <!-- Navigation Mobile -->
-  <div x-data="navigationMobile" class="c-mobileMenu fixed top-0 w-full z-40 xl:hidden"
+  <div x-data="navigationMobile" class="c-mobileMenu fixed top-0 w-full z-40 xl:hidden "
     @close-mobile-menu.window="onClose" @scroll.window="onWindowScroll">
 
     <div x-ref="bar" class="p-4 flex justify-between items-center border-b border-white">
-      {{ svg:logo class="text-white fill-white" }}
+      <div>Logo</div>
 
-      <button class="hamburger hamburger--squeeze" :class="{'is-active':open}" type="button" @click="onToggle">
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
-        </span>
+      <button title="close mobile navigation" class="c-hamburger" :class="{'-active':open}" type="button"
+        @click="open = !open">
+        <span class="c-hamburger__line -top"></span>
+        <span class="c-hamburger__line -center"></span>
+        <span class="c-hamburger__line -bottom"></span>
       </button>
 
     </div>
@@ -38,10 +41,10 @@
           <ul class="c-mobileMenuNavList">
             <li>
               <a class="text-lg" href="/" x-data="mobileNavLink" @click.prevent="onNavigate">Home</a>
-          </li>
-          <li>
-            <a class="text-lg" href="/" x-data="mobileNavLink" @click.prevent="onNavigate">Away</a>
-        </li>
+            </li>
+            <li>
+              <a class="text-lg" href="/" x-data="mobileNavLink" @click.prevent="onNavigate">Away</a>
+            </li>
           </ul>
 
           <div x-ref="socialMediaLinks" class="fixed bottom-4 right-4" x-show="showSocialMediaLinks"
@@ -61,7 +64,17 @@
       </div>
     </template>
   </div>
-
+  <br>
+  <div class="my-24">
+    <!-- Hamburger -->
+    <button title="close mobile navigation" x-data="{'open':false}" class="c-hamburger" :class="{'-active':open}"
+      type="button" @click="open = !open">
+      <span class="c-hamburger__line -top"></span>
+      <span class="c-hamburger__line -center"></span>
+      <span class="c-hamburger__line -bottom"></span>
+    </button>
+  </div>
+  <br>
   <!-- Scroller -->
   <div x-cloak x-data="scroller" @resize.window="onWindowResize" @load.window="onDocumentLoad" class="c-scroller"
     :class="{'-ready':ready}">
