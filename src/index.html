@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Scroller</title>
-  </head>
-  <body>
-    <div x-data="scroller" class="c-scroller">
-      <div x-ref="wrapper" class="c-scroller__wrapper -original">
-          <ul class="c-scroller__list -original">
-            <li class="c-scroller__item -original whitespace-nowrap">
-              i am text and can be <strong>bold</strong> as well as cotin images
-            </li>
-          </ul>
-      </div>
-    </div>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Scroller</title>
+  <style>
+    [x-cloak] {
+      visibility: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Scroller -->
+  <div x-cloak x-data="scroller" @resize.window="onWindowResize" @load.window="onDocumentLoad" class="c-scroller"
+    :class="{'-ready':ready}">
+    <ul class="c-scroller__list -original">
+      <li class="c-scroller__item -original pr-8">
+        <p>
+          I am text and can be <strong>bold</strong> and conatain contain images or other html elments <button
+            class="bg-slate-500 text-white p-2 py-1 mx-4 rounded-md">like a button</button>
+        </p>
+      </li>
+    </ul>
+  </div>
+
+</body>
 </html>

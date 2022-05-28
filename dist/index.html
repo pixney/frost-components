@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <title>Getting Started</title>
-    
-  <script defer src="main.js"></script></head>
-  <body>
-    <div x-data="scroller" class=" bg-red-200" ></div>
-    
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <title>Scroller</title>
+  <style>
+    [x-cloak] {
+      visibility: hidden;
+    }
+  </style>
+<script defer src="main.js"></script></head>
+<body>
+
+  <!-- Scroller -->
+  <div x-cloak x-data="scroller" @load.window="onDocumentLoad" class="c-scroller" :class="{'-ready':ready}">
+    <ul class="c-scroller__list -original">
+      <li class="c-scroller__item -original pr-8">
+        I am text and can be <strong>bold</strong> and conatain contain images or other html elments <button class="bg-slate-500 text-white p-2 py-1 mx-4 rounded-md">like a button</button>
+      </li>
+    </ul>
+  </div>
+
+</body>
 </html>
