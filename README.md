@@ -6,8 +6,19 @@ The components are using my own adoption of the ABEM styling convention.
 - [Css tricks writing on the topic of ABEM](https://css-tricks.com/abem-useful-adaptation-bem/)
 
 
-## Scroller
+## How to use
+Even though the intention of these components are to be distributed with the frost starter kit, they can be used in other scenarios as well.
+
+To use them in other scenarios, you need tailwind setup. Then include the correct tailwind plugin from this repository to your configuration file. 
+
+Copy the markup into your html file and make sure you import the component to your javascript file.
+
+## Components
+### Scroller
 A horizontal scroll component which supports scrolling different html elements across the screen.
+
+#### Html markup
+Simply copy and paste the following to your website.
 
 ``` 
 <div x-cloak x-data="scroller" @resize.window="onWindowResize" @load.window="onDocumentLoad" class="c-scroller" :class="{'-ready':ready}">

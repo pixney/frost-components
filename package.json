@@ -1,7 +1,7 @@
 {
   "name": "frost_scroller",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A collection of components built with AlpineJS and Tailwind for use with the Frost Starter Kit made available to Statamic.",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pixney/frost_scroller.git"
+    "url": "git+https://github.com/pixney/frost-components.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pixney/frost_scroller/issues"
+    "url": "https://github.com/pixney/frost-components/issues"
   },
-  "homepage": "https://github.com/pixney/frost_scroller#readme",
+  "homepage": "https://github.com/pixney/frost-components#readme",
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
