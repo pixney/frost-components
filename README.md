@@ -5,6 +5,8 @@ The components are using my own adoption of the ABEM styling convention.
 - [ABEM pattern library](https://imarc-boilerplate.netlify.app/pattern-library/docs/abem.html)
 - [Css tricks writing on the topic of ABEM](https://css-tricks.com/abem-useful-adaptation-bem/)
 
+## Start it 
+`npm run start`
 
 ## How to use
 Even though the intention of these components are to be distributed with the frost starter kit, they can be used in other scenarios as well.
